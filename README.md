@@ -30,6 +30,10 @@ etc.
 - `demo-layout` - example showing how to use layout
 - `demo-layout-scroll` - example of a fixed-size scrolling element
 
-## Limitation
+## Full height limitation
 
-It's not clear from the documentation how to make full-screen application taking full height of the screen
+To support fullscreen, additiona; [ink-use-stdout-dimensions](https://github.com/cameronhunter/ink-monorepo/tree/master/packages/ink-use-stdout-dimensions) library is required. Unfortunately, as of `ink-use-stdout-dimensions` version 1.0.5, and Bun 1.0.3, on Ubuntu Mate 22.04 at least, using this library results in an error:
+
+```
+Segmentation fault (core dumped)
+```

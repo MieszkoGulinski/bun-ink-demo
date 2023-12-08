@@ -35,4 +35,5 @@ const DemoLayout = () => {
   );
 };
 
-render(<DemoLayout />);
+const { clear } = render(<DemoLayout />);
+clear();
