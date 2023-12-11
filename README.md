@@ -29,11 +29,28 @@ etc.
 - `demo-interval` - simple counter, adapted from Ink's documentation
 - `demo-layout` - example showing how to use layout
 - `demo-layout-scroll` - example of a fixed-size scrolling element
+- `demo-fullscreen` - example of an application automatically resizing to fill the whole screen
 
-## Full height limitation
+## Full height
 
-To support fullscreen, additiona; [ink-use-stdout-dimensions](https://github.com/cameronhunter/ink-monorepo/tree/master/packages/ink-use-stdout-dimensions) library is required. Unfortunately, as of `ink-use-stdout-dimensions` version 1.0.5, and Bun 1.0.3, on Ubuntu Mate 22.04 at least, using this library results in an error:
+The officially recommended way to support fullscreen is an additional [ink-use-stdout-dimensions](https://github.com/cameronhunter/ink-monorepo/tree/master/packages/ink-use-stdout-dimensions) library. Unfortunately, as of `ink-use-stdout-dimensions` version 1.0.5, and Bun 1.0.3, on Ubuntu Mate 22.04 at least, using this library results in an error:
 
 ```
 Segmentation fault (core dumped)
+```
+
+Fortunately, implementing this functionality manually doesn't cause that error - as demonstrated in `demo-fullscreen`:
+
+```js
+const useTerminalHeight = () => {
+  const [height, setHeight] = useState(process.stdout.rows);
+
+  useEffect(() => {
+    process.stdout.on("resize", () => {
+      setHeight(process.stdout.rows);
+    });
+  }, []);
+
+  return height;
+};
 ```
