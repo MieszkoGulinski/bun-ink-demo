@@ -8,7 +8,7 @@
 
 Ink works with Bun **without any additional configuration**. When running on Node.js, it's required to install Babel and add a transpilation step. On Bun, it runs without any additional build steps - just install required packages with `bun install ink react @types/react` and create an entry file ending with `.tsx`.
 
-**Some parts are not working yet** - particularly **input**.
+As of writing that (December 2023), **some parts are not working yet** - particularly **input**. This makes Ink usable, for example, as some status monitor, but does not allow any type of interactive application.
 
 ## How to run
 
