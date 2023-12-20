@@ -21,8 +21,8 @@ bun install
 To run a demo:
 
 ```bash
-bun demo-hello-world.tsx
-bun demo-interval.tsx
+bun demos-display/1-hello-world.tsx
+bun demos-display/2-interval.tsx
 ```
 
 etc.
@@ -40,7 +40,7 @@ etc.
 
 ## Data input
 
-Data input using `useInput` **doesn't work**, no key is intercepted. Tested on Bun 1.0.18.
+Data input using `useInput` **doesn't work**, no key is intercepted. Tested on Bun 1.0.18. I wasn't able to find any workaround (yet?)
 
 ## Full height
 
