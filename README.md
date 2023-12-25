@@ -40,7 +40,9 @@ etc.
 
 ## Data input
 
-Data input using `useInput` **doesn't work**, no key is intercepted. Tested on Bun 1.0.18. I wasn't able to find any workaround (yet?)
+Data input using `useInput` **doesn't work**, no key is intercepted. Tested on Bun 1.0.18 and later on 1.0.20. I wasn't able to find any workaround (yet?). If you want to try it on some newer Bun version (in the future, I'm writing this in December 2023), try `demos-display/1-with-use-input`.
+
+For the heck of it, I tried using Inquirer as the text input, as Inquirer works on Bun.
 
 ## Full height
 
