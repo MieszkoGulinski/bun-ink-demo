@@ -40,7 +40,7 @@ etc.
 
 ## Data input
 
-Data input using `useInput` **doesn't work**, no key is intercepted, and closing the running Bun instance with Ctrl+C doesn't work. Tested on Bun 1.0.18 and later on 1.0.20. I wasn't able to find any workaround (yet?). If you want to try it on some newer Bun version (in the future, I'm writing this in December 2023), try `demos-display/1-with-use-input`.
+Data input using `useInput` **doesn't work**, no key is intercepted, and closing the running Bun instance with Ctrl+C doesn't work. Tested on Bun 1.1.6. I wasn't able to find any workaround (yet?). If you want to try it on some newer Bun version (in the future, I'm writing this in April 2024), try `demos-display/1-with-use-input`.
 
 ## Full height
 
